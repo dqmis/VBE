@@ -34,4 +34,6 @@ int main() {
 		write << A[i] << " ";
 	}
 	write.close();
+	
+	return 0;
 }
