@@ -37,7 +37,7 @@ int main() {
 }
 
 void i_des(std::string A, int sk[]) {
-	int sk1, sk2;
+    int sk1, sk2;
     char sim[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     for(int i = 0; i < 6; i+=2) {
         for(int j = 0; j < 16; j++) {
@@ -47,6 +47,6 @@ void i_des(std::string A, int sk[]) {
                 sk2 = j;
             }
         }
-		sk[i] = sk1 + sk2;
+       sk[i] = sk1 + sk2;
     }
 }
