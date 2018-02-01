@@ -1,6 +1,5 @@
 #include <fstream>
 #include <string>
-#include <iostream>
 
 #define data "U1.txt"
 #define answ "U1rez.txt"
@@ -42,14 +41,9 @@ void i_des(std::string A, int sk[]) {
         for(int j = 0; j < 16; j++) {
             if(A[i] == sim[j]) {
                 sk[i] = j * 16;
-            }
-        }
-        for(int j = 0; j < 16; j++) {
-            if(A[i+1] == sim[j]) {
+            } else if(A[i+1] == sim[j] && sk[i] >= 0) {
                 sk[i] += j;
             }
         }
     }
 }
-
-
