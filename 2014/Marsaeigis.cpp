@@ -35,8 +35,8 @@ int main() {
 	skaitymas(Marsas, Sekos, sekSk);
 	judejimas(Marsas, Sekos, sekSk);
 	rasymas(Sekos, sekSk);
-
-    return 0;
+	
+	return 0;
 }
 
 void skaitymas(Marsaeigis &A, Seka B[], int &sekSk) {
@@ -54,26 +54,20 @@ void skaitymas(Marsaeigis &A, Seka B[], int &sekSk) {
 }
 
 void judejimas(Marsaeigis A, Seka B[], int sekSk) {
-	for (int i = 0; i < sekSk; i++) {
+	for (int i = 0; i < sekSk; i++)
 		judesys(A, B[i]);
-	}
 }
 
 void judesys(Marsaeigis A, Seka &B) {
 	int vyk = 0; // Ivykdytu judesiu skaicius
 	for (int i = 0; i < B.jud; i++) {
-		if (B.komandos[i] == 1) {
+		if (B.komandos[i] == 1)
 			A.pradY++;
-		}
-		else if (B.komandos[i] == 2) {
+		else if (B.komandos[i] == 2)
 			A.pradX++;
-		}
-		else if (B.komandos[i] == 3) {
+		else if (B.komandos[i] == 3)
 			A.pradY--;
-		}
-		else {
-			A.pradX--;
-		}
+		else A.pradX--;
 		vyk++;
 		if (A.pradX == A.finX && A.pradY == A.finY) {
 			B.res();
