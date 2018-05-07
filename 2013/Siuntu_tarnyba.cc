@@ -24,7 +24,7 @@ int main() {
 		if(lim - ats >= 0) {
 			km += ats;
 			lim -= ats;
-			 im++;
+			im++;
 			gPav = pav;
 		}
 	}
