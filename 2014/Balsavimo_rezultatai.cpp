@@ -25,11 +25,13 @@ int main() {
 		task_Skyr(logTskSk, logTskGal);
 	}
 	ifs >> dirTsk[0] >> dirTsk[1] >> dirTsk[2];
+	ifs.close();
 
 	std::ofstream ofs(answ);
 	ofs << logTskSum[0] << " " << logTskSum[1] << " " << logTskSum[2] << std::endl;
 	ofs << logTskGal[0] << " " << logTskGal[1] << " " << logTskGal[2] << std::endl;
 	ofs << laimetojas(logTskGal, dirTsk);
+	ofs.close();
 	
 	return 0;
 }
